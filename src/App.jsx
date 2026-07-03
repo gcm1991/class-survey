@@ -40,7 +40,7 @@ function App() {
 
 function AboutSection({ title, image }) {
   const about_questions = [
-    "1. What does your stduent like to be called?",
+    "1. What does your student like to be called?",
     "2. What are their favorite activities?",
     "3. What makes them smile?",
   ];
