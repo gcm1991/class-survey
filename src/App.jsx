@@ -82,7 +82,7 @@ function AboutSection({ title, image }) {
 
 function LearningSection({ title, image }) {
   const learning_questions = [
-    "1. What are your hopes for your child this year?",
+    "1. What are your hopes for your student this year?",
     "2. Are there any learning strengths you'd like me to know about?",
   ];
   return (
@@ -202,7 +202,7 @@ function FamilySection({ title, image }) {
 
 function SupportSection({ title, image }) {
   const support_questions = [
-    "1. Does your child have any worries about starting school?",
+    "1. Does your student have any worries about starting school?",
     "2. Is there anything you'd like me to know so I can better support them?",
   ];
   return (
