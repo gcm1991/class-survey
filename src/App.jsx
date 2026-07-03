@@ -17,11 +17,13 @@ const large_box_height = "100px";
 function App() {
   return (
     <>
-      <div>
-        <h1>
-          Sharla's Class
-          <img src={beeImg} width="100" height="100" />
-        </h1>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div>
+          <h1 style={{ fontSize: "40px" }}>Welcome to ms. Stone's</h1>
+          <h1 style={{ marginBottom: "30px" }}>Kindergarten Class!</h1>
+        </div>
+
+        <img src={beeImg} width="100" height="100" />
       </div>
       <AboutSection title="About" image={childImg} />
       <LearningSection title="Learning" image={bookImg} />
@@ -38,7 +40,7 @@ function App() {
 
 function AboutSection({ title, image }) {
   const about_questions = [
-    "1. What does your child like to be called?",
+    "1. What does your stduent like to be called?",
     "2. What are their favorite activities?",
     "3. What makes them smile?",
   ];
