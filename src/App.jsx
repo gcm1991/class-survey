@@ -14,36 +14,19 @@ const small_box_height = "30px";
 const large_box_height = "100px";
 
 function App() {
-  const family_questions = [
-    "1. Preferred method of communication",
-    "2. Best time to contact you",
-    "3. Student strengths and interests",
-    "4. Family goals for the school year",
-    "5. Cultural traditions or information you'd like me to know",
-  ];
-
-  const support_questions = [
-    "1. Does your child have any worries about starting school?",
-    "2. Is there anything you'd like me to know so I can better support them?",
-  ];
-  const fun_questions = [
-    "1. Favorite book?",
-    "2. Favorite animal?",
-    "3. Favorite snack?",
-    "4. Dream job?",
-    "5. Anything else you'd like to share!",
-  ];
-
   return (
     <>
-      <h1>Hello Parent</h1>
-      <AboutSection />
-      <LearningSection />
+      <h1>Sharla's Class</h1>
+      <AboutSection title="About" image={childImg} />
+      <LearningSection title="Learning" image={bookImg} />
+      <FamilySection title="Family" image={familyImg} />
+      <SupportSection title="Support" image={heartImg} />
+      <FunSection title="Fun" image={funImg} />
     </>
   );
 }
 
-function AboutSection() {
+function AboutSection({ title, image }) {
   const about_questions = [
     "1. What does your child like to be called?",
     "2. What are their favorite activities?",
@@ -58,11 +41,11 @@ function AboutSection() {
           marginLeft: title_margin_left,
         }}
       >
-        <h2 style={{ marginTop: "30px" }}>About</h2>
+        <h2 style={{ marginTop: "30px" }}>{title}</h2>
       </div>
 
       <div style={{ display: "flex", width: "100%" }}>
-        <img src={childImg} width="200" height="250" alt="" />
+        <img src={image} width="200" height="250" alt="" />
         <div className="questions" style={{ flex: 1 }}>
           {about_questions.map((question) => (
             <>
@@ -96,7 +79,7 @@ function AboutSection() {
   );
 }
 
-function LearningSection() {
+function LearningSection({ title, image }) {
   const learning_questions = [
     "1. What are your hopes for your child this year?",
     "2. Are there any learning strengths you'd like me to know about?",
@@ -110,11 +93,11 @@ function LearningSection() {
           marginLeft: title_margin_left,
         }}
       >
-        <h2 style={{ marginTop: "30px" }}>About</h2>
+        <h2 style={{ marginTop: "30px" }}>{title}</h2>
       </div>
 
       <div style={{ display: "flex", width: "100%" }}>
-        <img src={childImg} width="200" height="250" alt="" />
+        <img src={image} width="200" height="250" alt="" />
         <div className="questions" style={{ flex: 1 }}>
           {learning_questions.map((question) => (
             <>
@@ -148,4 +131,266 @@ function LearningSection() {
   );
 }
 
+function FamilySection({ title, image }) {
+  const family_questions = [
+    "1. Preferred method of communication",
+    "2. Best time to contact you",
+    "3. Student strengths and interests",
+    "4. Family goals for the school year",
+    "5. Cultural traditions or information you'd like me to know",
+  ];
+  return (
+    <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "left",
+          marginLeft: title_margin_left,
+        }}
+      >
+        <h2 style={{ marginTop: "30px" }}>{title}</h2>
+      </div>
+
+      <div style={{ display: "flex", width: "100%" }}>
+        <img src={image} width="200" height="250" alt="" />
+        <div className="questions" style={{ flex: 1 }}>
+          <div style={{ display: "flex", width: "100%" }}>
+            <div style={{ flex: 1 }}>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {family_questions[0]}
+              </p>
+              <input
+                style={{
+                  width: "80%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  boxShadow: "none",
+                }}
+                text
+              ></input>
+            </div>
+            <div style={{ flex: 1 }}>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {family_questions[1]}
+              </p>
+              <input
+                style={{
+                  width: "80%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  boxShadow: "none",
+                }}
+                text
+              ></input>
+            </div>
+          </div>
+
+          {family_questions.slice(2).map((question) => (
+            <>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {question}
+              </p>
+              <input
+                style={{
+                  width: "90%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  boxShadow: "none",
+                }}
+                text
+              ></input>
+            </>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+function SupportSection({ title, image }) {
+  const support_questions = [
+    "1. Does your child have any worries about starting school?",
+    "2. Is there anything you'd like me to know so I can better support them?",
+  ];
+  return (
+    <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "left",
+          marginLeft: title_margin_left,
+        }}
+      >
+        <h2 style={{ marginTop: "30px" }}>{title}</h2>
+      </div>
+
+      <div style={{ display: "flex", width: "100%" }}>
+        <img src={image} width="200" height="250" alt="" />
+        <div className="questions" style={{ flex: 1 }}>
+          {support_questions.map((question) => (
+            <>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {question}
+              </p>
+              <input
+                style={{
+                  width: "90%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  boxShadow: "none",
+                }}
+                text
+              ></input>
+            </>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+function FunSection({ title, image }) {
+  const fun_questions = [
+    "1. Favorite book?",
+    "2. Favorite animal?",
+    "3. Favorite snack?",
+    "4. Dream job?",
+    "5. Anything else you'd like to share!",
+  ];
+  return (
+    <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "left",
+          marginLeft: title_margin_left,
+        }}
+      >
+        <h2 style={{ marginTop: "30px" }}>{title}</h2>
+      </div>
+
+      <div style={{ display: "flex", width: "100%" }}>
+        <img src={image} width="200" height="250" alt="" />
+        <div className="questions" style={{ flex: 1 }}>
+          <div style={{ display: "flex", width: "100%" }}>
+            <div style={{ flex: 1 }}>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {fun_questions[0]}
+              </p>
+              <input
+                style={{
+                  width: "80%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  boxShadow: "none",
+                }}
+                text
+              ></input>
+            </div>
+            <div style={{ flex: 1 }}>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {fun_questions[1]}
+              </p>
+              <input
+                style={{
+                  width: "80%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  boxShadow: "none",
+                }}
+                text
+              ></input>
+            </div>
+          </div>
+          {fun_questions.slice(2).map((question) => (
+            <>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {question}
+              </p>
+              <input
+                style={{
+                  width: "90%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  boxShadow: "none",
+                }}
+                text
+              ></input>
+            </>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
 export default App;
