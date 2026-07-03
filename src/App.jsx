@@ -4,6 +4,7 @@ import bookImg from "./assets/book.png";
 import familyImg from "./assets/family.png";
 import heartImg from "./assets/heart.png";
 import funImg from "./assets/fun.png";
+import beeImg from "./assets/bee.png";
 import "./App.css";
 
 const question_margin_left = "30px";
@@ -16,12 +17,21 @@ const large_box_height = "100px";
 function App() {
   return (
     <>
-      <h1>Sharla's Class</h1>
+      <div>
+        <h1>
+          Sharla's Class
+          <img src={beeImg} width="100" height="100" />
+        </h1>
+      </div>
       <AboutSection title="About" image={childImg} />
       <LearningSection title="Learning" image={bookImg} />
       <FamilySection title="Family" image={familyImg} />
       <SupportSection title="Support" image={heartImg} />
       <FunSection title="Fun" image={funImg} />
+
+      <div className="submit-container">
+        <button className="submit-button">Submit</button>
+      </div>
     </>
   );
 }
@@ -44,7 +54,7 @@ function AboutSection({ title, image }) {
         <h2 style={{ marginTop: "30px" }}>{title}</h2>
       </div>
 
-      <div style={{ display: "flex", width: "100%" }}>
+      <div style={{ display: "flex", width: "100%", paddingLeft: "25px" }}>
         <img src={image} width="200" height="250" alt="" />
         <div className="questions" style={{ flex: 1 }}>
           {about_questions.map((question) => (
@@ -59,22 +69,7 @@ function AboutSection({ title, image }) {
               >
                 {question}
               </p>
-              <input
-                style={{
-                  width: "90%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingLeft: "10px",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  boxShadow: "none",
-                  appearance: "none",
-                }}
-                type="text"
-              ></input>
+              <input className="survey-input survey-input-full" type="text" />
             </>
           ))}
         </div>
@@ -100,7 +95,7 @@ function LearningSection({ title, image }) {
         <h2 style={{ marginTop: "30px" }}>{title}</h2>
       </div>
 
-      <div style={{ display: "flex", width: "100%" }}>
+      <div style={{ display: "flex", width: "100%", paddingLeft: "25px" }}>
         <img src={image} width="200" height="250" alt="" />
         <div className="questions" style={{ flex: 1 }}>
           {learning_questions.map((question) => (
@@ -115,19 +110,7 @@ function LearningSection({ title, image }) {
               >
                 {question}
               </p>
-              <textarea
-                style={{
-                  width: "90%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "75px",
-                  fontSize: "20px",
-                  paddingTop: "10px",
-                  paddingLeft: "10px",
-                  boxShadow: "none",
-                }}
-                type="text"
-              ></textarea>
+              <textarea className="survey-input-area" type="text" />
             </>
           ))}
         </div>
@@ -156,7 +139,7 @@ function FamilySection({ title, image }) {
         <h2 style={{ marginTop: "30px" }}>{title}</h2>
       </div>
 
-      <div style={{ display: "flex", width: "100%" }}>
+      <div style={{ display: "flex", width: "100%", paddingLeft: "25px" }}>
         <img src={image} width="200" height="250" alt="" />
         <div className="questions" style={{ flex: 1 }}>
           <div style={{ display: "flex", width: "100%" }}>
@@ -172,21 +155,9 @@ function FamilySection({ title, image }) {
                 {family_questions[0]}
               </p>
               <input
-                style={{
-                  width: "90%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingLeft: "10px",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  boxShadow: "none",
-                  appearance: "none",
-                }}
+                className="survey-input survey-input survey-input-left-half"
                 type="text"
-              ></input>
+              />
             </div>
             <div style={{ flex: 1 }}>
               {" "}
@@ -200,21 +171,9 @@ function FamilySection({ title, image }) {
                 {family_questions[1]}
               </p>
               <input
-                style={{
-                  width: "80%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingLeft: "10px",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  boxShadow: "none",
-                  appearance: "none",
-                }}
+                className="survey-input survey-input-right-half"
                 type="text"
-              ></input>
+              />
             </div>
           </div>
 
@@ -230,22 +189,7 @@ function FamilySection({ title, image }) {
               >
                 {question}
               </p>
-              <input
-                style={{
-                  width: "90%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingLeft: "10px",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  boxShadow: "none",
-                  appearance: "none",
-                }}
-                type="text"
-              ></input>
+              <input className="survey-input survey-input-full" type="text" />
             </>
           ))}
         </div>
@@ -271,7 +215,7 @@ function SupportSection({ title, image }) {
         <h2 style={{ marginTop: "30px" }}>{title}</h2>
       </div>
 
-      <div style={{ display: "flex", width: "100%" }}>
+      <div style={{ display: "flex", width: "100%", paddingLeft: "25px" }}>
         <img src={image} width="200" height="250" alt="" />
         <div className="questions" style={{ flex: 1 }}>
           {support_questions.map((question) => (
@@ -286,19 +230,7 @@ function SupportSection({ title, image }) {
               >
                 {question}
               </p>
-              <textarea
-                style={{
-                  width: "90%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "75px",
-                  fontSize: "20px",
-                  paddingTop: "10px",
-                  paddingLeft: "10px",
-                  boxShadow: "none",
-                }}
-                type="text"
-              ></textarea>
+              <textarea className="survey-input-area" type="text" />
             </>
           ))}
         </div>
@@ -327,7 +259,7 @@ function FunSection({ title, image }) {
         <h2 style={{ marginTop: "30px" }}>{title}</h2>
       </div>
 
-      <div style={{ display: "flex", width: "100%" }}>
+      <div style={{ display: "flex", width: "100%", paddingLeft: "25px" }}>
         <img src={image} width="200" height="250" alt="" />
         <div className="questions" style={{ flex: 1 }}>
           <div style={{ display: "flex", width: "100%" }}>
@@ -343,21 +275,9 @@ function FunSection({ title, image }) {
                 {fun_questions[0]}
               </p>
               <input
-                style={{
-                  width: "90%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingLeft: "10px",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  boxShadow: "none",
-                  appearance: "none",
-                }}
+                className="survey-input survey-input-left-half"
                 type="text"
-              ></input>
+              />
             </div>
             <div style={{ flex: 1 }}>
               {" "}
@@ -371,25 +291,9 @@ function FunSection({ title, image }) {
                 {fun_questions[1]}
               </p>
               <input
-                style={{
-                  width: "80%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingLeft: "10px",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  boxShadow: "none",
-                  appearance: "none",
-                  appearance: "none",
-                }}
+                className="survey-input survey-input-right-half"
                 type="text"
-              ></input>
+              />
             </div>
           </div>
           <div style={{ display: "flex", width: "100%" }}>
@@ -405,25 +309,9 @@ function FunSection({ title, image }) {
                 {fun_questions[2]}
               </p>
               <input
-                style={{
-                  width: "90%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingLeft: "10px",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  boxShadow: "none",
-                  appearance: "none",
-                  appearance: "none",
-                }}
+                className="survey-input survey-input-left-half"
                 type="text"
-              ></input>
+              />
             </div>
             <div style={{ flex: 1 }}>
               {" "}
@@ -437,21 +325,9 @@ function FunSection({ title, image }) {
                 {fun_questions[3]}
               </p>
               <input
-                style={{
-                  width: "80%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingLeft: "10px",
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  outline: "none",
-                  boxShadow: "none",
-                  appearance: "none",
-                }}
+                className="survey-input survey-input-right-half"
                 type="text"
-              ></input>
+              />
             </div>
           </div>
           {fun_questions.slice(4).map((question) => (
@@ -466,19 +342,7 @@ function FunSection({ title, image }) {
               >
                 {question}
               </p>
-              <textarea
-                style={{
-                  width: "90%",
-                  marginLeft: question_margin_left,
-                  borderRadius: "25px",
-                  height: "30px",
-                  fontSize: "20px",
-                  paddingTop: "10px",
-                  paddingLeft: "10px",
-                  boxShadow: "none",
-                }}
-                type="text"
-              ></textarea>
+              <textarea className="survey-input-area" type="text" />
             </>
           ))}
         </div>

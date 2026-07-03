@@ -17,10 +17,28 @@ body {
   text-align: left;
 }
 
+.survey-input-area {
+  margin-left: 30px;
+  height: 80px;
+  width: 90%;
+
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
 
 .survey-input {
-  width: 80%;
-  margin-left: 30px;
+
   height: 30px;
 
   font-size: 20px;
@@ -37,7 +55,70 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+
+.survey-input-full {
+  margin-left: 30px;
+  width: 90%;
+}
+
+.survey-input-left-half {
+  margin-left: 30px;
+  width: 80%;
+}
+
+.survey-input-right-half {
+  margin-left: 30px;
+  width: 80%;
+}
+
 .survey-input:focus {
   border-color: #4a90e2;
   box-shadow: 0 0 6px rgba(74, 144, 226, 0.35);
+}
+
+.survey-input-area:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.35);
+}
+
+h1 {
+  font-size: 52px;
+  font-family: "Fredoka"; 
+  font-weight: "bold";
+  color: #2c3e50;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  font-family: "Fredoka"; 
+
+  color: #2c3e50;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #fffdf6,
+    #f7fbff
+  );
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 25px;
+}
+
+.submit-button {
+  padding: 12px 36px;
+  font-size: 20px;
+  border-radius: 25px;
+  cursor: pointer;
 }
