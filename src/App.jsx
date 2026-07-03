@@ -67,9 +67,13 @@ function AboutSection({ title, image }) {
                   height: "30px",
                   fontSize: "20px",
                   paddingLeft: "10px",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
                   boxShadow: "none",
+                  appearance: "none",
                 }}
-                text
+                type="text"
               ></input>
             </>
           ))}
@@ -111,18 +115,19 @@ function LearningSection({ title, image }) {
               >
                 {question}
               </p>
-              <input
+              <textarea
                 style={{
                   width: "90%",
                   marginLeft: question_margin_left,
                   borderRadius: "25px",
-                  height: "30px",
+                  height: "75px",
                   fontSize: "20px",
+                  paddingTop: "10px",
                   paddingLeft: "10px",
                   boxShadow: "none",
                 }}
-                text
-              ></input>
+                type="text"
+              ></textarea>
             </>
           ))}
         </div>
@@ -168,15 +173,19 @@ function FamilySection({ title, image }) {
               </p>
               <input
                 style={{
-                  width: "80%",
+                  width: "90%",
                   marginLeft: question_margin_left,
                   borderRadius: "25px",
                   height: "30px",
                   fontSize: "20px",
                   paddingLeft: "10px",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
                   boxShadow: "none",
+                  appearance: "none",
                 }}
-                text
+                type="text"
               ></input>
             </div>
             <div style={{ flex: 1 }}>
@@ -198,9 +207,13 @@ function FamilySection({ title, image }) {
                   height: "30px",
                   fontSize: "20px",
                   paddingLeft: "10px",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
                   boxShadow: "none",
+                  appearance: "none",
                 }}
-                text
+                type="text"
               ></input>
             </div>
           </div>
@@ -225,9 +238,13 @@ function FamilySection({ title, image }) {
                   height: "30px",
                   fontSize: "20px",
                   paddingLeft: "10px",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
                   boxShadow: "none",
+                  appearance: "none",
                 }}
-                text
+                type="text"
               ></input>
             </>
           ))}
@@ -269,18 +286,19 @@ function SupportSection({ title, image }) {
               >
                 {question}
               </p>
-              <input
+              <textarea
                 style={{
                   width: "90%",
                   marginLeft: question_margin_left,
                   borderRadius: "25px",
-                  height: "30px",
+                  height: "75px",
                   fontSize: "20px",
+                  paddingTop: "10px",
                   paddingLeft: "10px",
                   boxShadow: "none",
                 }}
-                text
-              ></input>
+                type="text"
+              ></textarea>
             </>
           ))}
         </div>
@@ -326,15 +344,19 @@ function FunSection({ title, image }) {
               </p>
               <input
                 style={{
-                  width: "80%",
+                  width: "90%",
                   marginLeft: question_margin_left,
                   borderRadius: "25px",
                   height: "30px",
                   fontSize: "20px",
                   paddingLeft: "10px",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
                   boxShadow: "none",
+                  appearance: "none",
                 }}
-                text
+                type="text"
               ></input>
             </div>
             <div style={{ flex: 1 }}>
@@ -356,13 +378,83 @@ function FunSection({ title, image }) {
                   height: "30px",
                   fontSize: "20px",
                   paddingLeft: "10px",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
                   boxShadow: "none",
+                  appearance: "none",
+                  appearance: "none",
                 }}
-                text
+                type="text"
               ></input>
             </div>
           </div>
-          {fun_questions.slice(2).map((question) => (
+          <div style={{ display: "flex", width: "100%" }}>
+            <div style={{ flex: 1 }}>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {fun_questions[2]}
+              </p>
+              <input
+                style={{
+                  width: "90%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
+                  boxShadow: "none",
+                  appearance: "none",
+                  appearance: "none",
+                }}
+                type="text"
+              ></input>
+            </div>
+            <div style={{ flex: 1 }}>
+              {" "}
+              <p
+                style={{
+                  marginTop: question_margin_top,
+                  marginBottom: question_margin_bottom,
+                  marginLeft: question_margin_left,
+                }}
+              >
+                {fun_questions[3]}
+              </p>
+              <input
+                style={{
+                  width: "80%",
+                  marginLeft: question_margin_left,
+                  borderRadius: "25px",
+                  height: "30px",
+                  fontSize: "20px",
+                  paddingLeft: "10px",
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  outline: "none",
+                  boxShadow: "none",
+                  appearance: "none",
+                }}
+                type="text"
+              ></input>
+            </div>
+          </div>
+          {fun_questions.slice(4).map((question) => (
             <>
               {" "}
               <p
@@ -374,18 +466,19 @@ function FunSection({ title, image }) {
               >
                 {question}
               </p>
-              <input
+              <textarea
                 style={{
                   width: "90%",
                   marginLeft: question_margin_left,
                   borderRadius: "25px",
                   height: "30px",
                   fontSize: "20px",
+                  paddingTop: "10px",
                   paddingLeft: "10px",
                   boxShadow: "none",
                 }}
-                text
-              ></input>
+                type="text"
+              ></textarea>
             </>
           ))}
         </div>
