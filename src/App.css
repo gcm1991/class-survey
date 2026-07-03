@@ -18,6 +18,7 @@ body {
 }
 
 .survey-input-area {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 30px;
   height: 80px;
   width: 90%;
@@ -38,7 +39,7 @@ body {
 }
 
 .survey-input {
-
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 30px;
 
   font-size: 20px;
@@ -91,7 +92,16 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 38px;
+  font-family:cursive; 
+
+  color: #2c3e50;
+  margin-top: 34px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
   font-family: "Fredoka"; 
 
   color: #2c3e50;
@@ -121,4 +131,22 @@ body {
   font-size: 20px;
   border-radius: 25px;
   cursor: pointer;
+
+  background-color: white;
+  border: 1px solid #ccc;
+
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+}
+
+.submit-button:hover{
+    border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.35);
+}
+
+.submit-button:active{
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.35);
 }
